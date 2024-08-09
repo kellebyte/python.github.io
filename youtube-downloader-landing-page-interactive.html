@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Youtube MP4 & MP3 İndirici</title>
+        <!-- Open Graph / Discord Embed Meta Tags -->
+        <meta property="og:title" content="Kelle - Python Tabanlı Youtube İndirici">
+        <meta property="og:description" content="En gelişmiş özelliklere sahip, kullanıcı dostu YouTube video indirme aracı. Çoklu format desteği, gelişmiş ayarlar, hızlı indirme ve daha fazlası!">
+        <meta property="og:image" content="https://i.hizliresim.com/geqgha5.png">
+        <meta property="og:url" content="https://i.hizliresim.com/geqgha5.png">
+        <meta property="og:type" content="website">
+        <meta name="theme-color" content="#4A90E2">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <style>
+        [x-cloak] { display: none; }
+        .feature-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body x-data="{ darkMode: false }" :class="{ 'dark': darkMode }" class="font-sans transition-colors duration-300">
+    <div class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+        <header class="fixed w-full z-50 bg-white dark:bg-gray-900 shadow-md transition-colors duration-300">
+            <nav x-data="{ isOpen: false }" class="container mx-auto px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">YT İndirici Pro</div>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400">Özellikler</a>
+                        <a href="#demo" class="hover:text-blue-600 dark:hover:text-blue-400">Demo</a>
+                        <a href="https://github.com/kellebyte/python-youtubeindirici/releases/tag/Derlenmi%C5%9FHali" class="hover:text-blue-600 dark:hover:text-blue-400">İndir</a>
+                        <a href="#faq" class="hover:text-blue-600 dark:hover:text-blue-400">SSS</a>
+                        <button @click="darkMode = !darkMode" class="focus:outline-none">
+                            <i :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="pt-16">
+            <section class="py-20 bg-gradient-to-b from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800 text-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-5xl font-bold mb-6">Python Tabanlı, Youtube MP4 & MP3 İndirici</h1>
+                    <p class="text-xl mb-12">En gelişmiş özelliklere sahip, kullanıcı dostu YouTube video indirme aracı!</p>
+                    <a href="#demo" class="mt-8 inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300">Hemen Deneyin</a>
+                    <a href="https://github.com/kellebyte/python-youtubeindirici" class="mt-4 inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300">GitHub Sayfası</a>
+                </div>
+            </section>
+
+            <section id="features" class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12">Gelişmiş Özellikler</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="feature-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                            <i class="fas fa-film text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Çoklu Format Desteği</h3>
+                            <p class="text-gray-600 dark:text-gray-400">MP4, WebM, 3GP ve daha fazlası. Ayrıca, MP3, AAC, WAV gibi ses formatları da desteklenir.</p>
+                        </div>
+                        <div class="feature-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                            <i class="fas fa-cogs text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Gelişmiş Ayarlar</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Video çözünürlüğü, ses kalitesi, FPS ve codec seçenekleri ile tam kontrol sizde.</p>
+                        </div>
+                        <div class="feature-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                            <i class="fas fa-bolt text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Hızlı İndirme</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Çoklu bağlantı desteği ile ultra hızlı indirme. Büyük dosyaları bile anında indirin.</p>
+                        </div>
+                        <div class="feature-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                            <i class="fas fa-list-ol text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Toplu İndirme</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Playlist ve kanal videolarını toplu olarak indirin. Otomatik organizasyon özelliği ile düzenli kalın.</p>
+                        </div>
+                        <div class="feature-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                            <i class="fas fa-tags text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Otomatik Metadata</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Video başlığı, sanatçı, albüm bilgileri otomatik olarak eklenir. ID3 tag desteği ile müzik dosyalarınız her zaman düzenli.</p>
+                        </div>
+                        <div class="feature-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300">
+                            <i class="fas fa-shield-alt text-4xl text-blue-600 dark:text-blue-400 mb-4"></i>
+                            <h3 class="text-xl font-semibold mb-2">Güvenli İndirme</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Entegre virüs taraması ve şifreleme ile güvenli indirme. Gizliliğiniz bizim için önemli.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="demo" class="py-20 bg-gray-100 dark:bg-gray-800">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12">İnteraktif Demo</h2>
+                    <div x-data="youtubeDownloader()" class="max-w-2xl mx-auto bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+                        <div class="mb-4">
+                            <label for="url" class="block mb-2 font-semibold">YouTube URL'si:</label>
+                            <input type="text" id="url" x-model="url" @input="resetStatus" class="w-full px-3 py-2 border rounded-md dark:bg-gray-600 dark:border-gray-500" placeholder="https://www.youtube.com/watch?v=...">
+                            <p x-show="urlError" x-text="urlError" class="text-red-500 text-sm mt-1"></p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="format" class="block mb-2 font-semibold">Format:</label>
+                            <select id="format" x-model="format" class="w-full px-3 py-2 border rounded-md dark:bg-gray-600 dark:border-gray-500">
+                                <option value="mp4">MP4</option>
+                                <option value="mp3">MP3</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="resolution" class="block mb-2 font-semibold">Çözünürlük:</label>
+                            <select id="resolution" x-model="resolution" class="w-full px-3 py-2 border rounded-md dark:bg-gray-600 dark:border-gray-500">
+                                <option value="360p">360p (30 FPS)</option>
+                                <option value="480p">480p (30 FPS)</option>
+                                <option value="720p">720p (30 FPS)</option>
+                                <option value="1080p">1080p (30 FPS)</option>
+                                <option value="1440p">1440p (60 FPS)</option>
+                                <option value="2160p">2160p (60 FPS)</option>
+                            </select>
+                        </div>
+                        <button @click="downloadVideo" class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                            İndir (Bu Sadece Göstermek Amaçlı İndirme Başlamaz.)
+                        </button>
+                        <p x-show="status" x-text="status" class="text-green-500 text-sm mt-2"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12">Sıkça Sorulan Sorular</h2>
+                    <div class="max-w-4xl mx-auto">
+                        <div x-data="{ open: false }" class="mb-6">
+                            <button @click="open = !open" class="w-full text-left font-semibold text-lg px-6 py-4 bg-white dark:bg-gray-700 rounded-lg shadow-md flex justify-between items-center">
+                                <span>Bu uygulama nasıl çalışıyor?</span>
+                                <i :class="open ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+                            </button>
+                            <div x-show="open" class="px-6 py-4 text-gray-600 dark:text-gray-400">
+                                Uygulama, Python kullanarak YouTube videolarını indirmenizi sağlar. Gelişmiş özellikler ve format seçenekleri sunar.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="mb-6">
+                            <button @click="open = !open" class="w-full text-left font-semibold text-lg px-6 py-4 bg-white dark:bg-gray-700 rounded-lg shadow-md flex justify-between items-center">
+                                <span>Bu uygulama ücretsiz mi?</span>
+                                <i :class="open ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+                            </button>
+                            <div x-show="open" class="px-6 py-4 text-gray-600 dark:text-gray-400">
+                                Evet, bu uygulama tamamen ücretsizdir ve açık kaynaklıdır.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="mb-6">
+                            <button @click="open = !open" class="w-full text-left font-semibold text-lg px-6 py-4 bg-white dark:bg-gray-700 rounded-lg shadow-md flex justify-between items-center">
+                                <span>Hangi platformları destekliyor?</span>
+                                <i :class="open ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+                            </button>
+                            <div x-show="open" class="px-6 py-4 text-gray-600 dark:text-gray-400">
+                                Python ile çalışan her platformda (Windows, MacOS, Linux) kullanabilirsiniz.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="mb-6">
+                            <button @click="open = !open" class="w-full text-left font-semibold text-lg px-6 py-4 bg-white dark:bg-gray-700 rounded-lg shadow-md flex justify-between items-center">
+                                <span>Yasal mı?</span>
+                                <i :class="open ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+                            </button>
+                            <div x-show="open" class="px-6 py-4 text-gray-600 dark:text-gray-400">
+                                Uygulamanın kendisi yasal olmakla birlikte, telif hakkı korumalı içerikleri indirmek yasalara aykırı olabilir. Lütfen sadece izin verilen içerikleri indirin ve telif hakkı yasalarına uyun.
+                            </div>
+                        </div>
+                        <div x-data="{ open: false }" class="mb-6">
+                            <button @click="open = !open" class="w-full text-left font-semibold text-lg px-6 py-4 bg-white dark:bg-gray-700 rounded-lg shadow-md flex justify-between items-center">
+                                <span>İndirme hızı neden yavaş?</span>
+                                <i :class="open ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+                            </button>
+                            <div x-show="open" class="px-6 py-4 text-gray-600 dark:text-gray-400">
+                                İndirme hızı, internet bağlantınızın hızına, sunucu yüküne ve seçilen video kalitesine bağlıdır. Yüksek kaliteli videolar daha uzun sürede indirilir.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
